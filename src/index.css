@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark: #0F1016;
+    --card-dark: #161928;
+    --neon-blue: #00D2FF;
+    --neon-magenta: #D900FF;
+    --neon-green: #22C55E;
+    --neon-yellow: #FACC15;
+  }
+  
+  body {
+    background-color: #0F1016;
+    color: #F8FAFC;
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+}
+
+/* Custom Neon Glow Utilities */
+.neon-border-blue {
+  border: 1.5px solid #00D2FF;
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.45), inset 0 0 8px rgba(0, 210, 255, 0.12);
+}
+
+.neon-border-blue-sm {
+  border: 1px solid rgba(0, 210, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 210, 255, 0.35);
+}
+
+.neon-border-magenta {
+  border: 1.5px solid #D900FF;
+  box-shadow: 0 0 16px rgba(217, 0, 255, 0.5);
+}
+
+.neon-border-green {
+  border: 1.5px solid #22C55E;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.5);
+}
+
+.neon-glow-text {
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.7);
+}
+
+.neon-glow-magenta-text {
+  text-shadow: 0 0 12px rgba(217, 0, 255, 0.7);
+}
+
+.neon-glow-green-text {
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+}
+
+/* Gradient Button: Green to Purple */
+.btn-green-to-purple {
+  background: linear-gradient(135deg, #22C55E 0%, #10B981 35%, #8B5CF6 70%, #D900FF 100%);
+  box-shadow: 0 4px 20px rgba(34, 197, 94, 0.35), 0 0 15px rgba(217, 0, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-green-to-purple:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 25px rgba(34, 197, 94, 0.5), 0 0 20px rgba(217, 0, 255, 0.45);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0C10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232A44;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00D2FF;
+}
+
+/* Mobile Frame Wrapper Simulation */
+.mobile-frame-container {
+  width: 100%;
+  max-width: 400px;
+  min-height: 840px;
+  background: #0F1016;
+  border-radius: 46px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 210, 255, 0.25);
+  border: 4px solid #1E2336;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dynamic Island Simulation */
+.dynamic-island {
+  width: 110px;
+  height: 28px;
+  background: #000;
+  border-radius: 20px;
+  margin: 10px auto 0 auto;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+/* Canvas Signature Pad */
+.signature-canvas {
+  touch-action: none;
+  cursor: crosshair;
+}
